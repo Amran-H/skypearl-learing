@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const LeftSideNav = () => {
     const [categories, setCategories] = useState([]);
 
@@ -17,11 +18,11 @@ const LeftSideNav = () => {
 
     return (
         <div>
-            <h3>Total Courses: {categories.length}</h3>
+            <h4>Total Courses: {categories.length}</h4>
             <div>
                 {
-                    categories.map(category => <p className="d-grid gap-2 px-5 " >
-                        <Button variant="dark" size="lg" key={category.id}><Link>{category.name}</Link></Button>
+                    categories.map(category => <p className="d-grid gap-2  " >
+                        <Button variant="dark" size="lg" key={category.id}><Link to={`/category/${category.id}`}>{category.name}</Link></Button>
                     </p>)
                 }
             </div>
