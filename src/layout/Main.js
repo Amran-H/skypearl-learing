@@ -16,10 +16,10 @@ const Main = () => {
                     <Col lg="2" className='d-none d-lg-block'>
                         <LeftSideNav></LeftSideNav>
                     </Col>
-                    <Col lg="7">
+                    <Col lg="8">
                         <Outlet></Outlet>
                     </Col>
-                    <Col lg="3" className='d-none d-lg-block'>
+                    <Col lg="2" className='d-none d-lg-block'>
                         <RightSideNav></RightSideNav>
                     </Col>
 
