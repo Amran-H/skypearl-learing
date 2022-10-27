@@ -12,21 +12,21 @@ const CourseSummaryCard = ({ course }) => {
     return (
         <div>
 
-            <Col >
-                <Card className='shadow'>
-                    <Card.Img className='p-2 shadow mh-50' variant="top" src={image_url} />
-                    <Card.Body>
-                        <Card.Title> {title}</Card.Title>
-                        <Card.Text>
-                            {details.length > 200 ?
-                                <p>{details.slice(0, 200) + '...'} <Link to={`/course/${_id}`}>Explore the course</Link></p>
-                                :
-                                <p>{details}</p>
-                            }
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Col>
+
+            <Card className='shadow'>
+                <Card.Img className='p-2 shadow mh-50' variant="top" src={image_url} />
+                <Card.Body>
+                    <Card.Title> {title}</Card.Title>
+                    <Card.Text>
+                        {details.length > 200 ?
+                            <p>{details.slice(0, 200) + '...'} <Link to={`/course/${_id}`}>Explore the course</Link></p>
+                            :
+                            <p>{details}</p>
+                        }
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+
 
         </div>
     );

@@ -19,9 +19,9 @@ const Main = () => {
                     <Col lg="">
                         <Outlet></Outlet>
                     </Col>
-                    <Col lg="3" className='d-none d-lg-block'>
+                    {/* <Col lg="3" className='d-none d-lg-block'>
                         <RightSideNav></RightSideNav>
-                    </Col>
+                    </Col> */}
 
                 </Row>
             </Container>
