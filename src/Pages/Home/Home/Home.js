@@ -11,7 +11,7 @@ const Home = () => {
 
     return (
         <div>
-            <h2>Home: {allCourse.length}</h2>
+            {/* <h2 className='mb-5'>Welcome to the finest digital learning platform SkyPearl-learning. Here you can find different courses of programming languages.</h2> */}
             <Container>
                 <Row xs={1} md={2} lg={3} className="g-2">
                     {

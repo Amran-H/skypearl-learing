@@ -1,21 +1,27 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import CourseSummaryCard from '../../../Shared/CourseSummaryCard/CourseSummaryCard';
+import LeftSideNav from '../../../Shared/LeftSideNav/LeftSideNav';
 
 const Category = () => {
     const categoryCourse = useLoaderData();
     return (
         <div>
-            <h2>This is category {categoryCourse.length}</h2>
+
             <Container>
-                <Row md={1} lg={1}>
-                    {
-                        categoryCourse.map(course => <CourseSummaryCard
-                            key={course._id}
-                            course={course}
-                        ></CourseSummaryCard>)
-                    }
+                <Row lg={1}>
+                    <Col lg="4" className='d-none d-lg-block'>
+                        <LeftSideNav></LeftSideNav>
+                    </Col>
+                    <Col lg="8">
+                        {
+                            categoryCourse.map(course => <CourseSummaryCard
+                                key={course._id}
+                                course={course}
+                            ></CourseSummaryCard>)
+                        }
+                    </Col>
                 </Row>
             </Container>
         </div>
