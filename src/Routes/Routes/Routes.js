@@ -18,27 +18,27 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/course')
+                loader: () => fetch('https://skypearl-learning-server.vercel.app/course')
             },
             {
                 path: '/course',
                 element: <CoursesPage></CoursesPage>,
-                loader: () => fetch('http://localhost:5000/course')
+                loader: () => fetch('https://skypearl-learning-server.vercel.app/course')
             },
             {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://skypearl-learning-server.vercel.app/category/${params.id}`)
             },
             {
                 path: '/Course/:id',
                 element: <Course></Course>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({ params }) => fetch(`https://skypearl-learning-server.vercel.app/course/${params.id}`)
             },
             {
                 path: '/CheckOut/:id',
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({ params }) => fetch(`https://skypearl-learning-server.vercel.app/course/${params.id}`)
             },
             {
                 path: '/login',
