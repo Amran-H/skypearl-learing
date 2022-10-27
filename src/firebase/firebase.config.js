@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBeYeBnDORSNi07MGXFh7mOokikFN4dObE",
-    authDomain: "skypearl-learning.firebaseapp.com",
-    projectId: "skypearl-learning",
-    storageBucket: "skypearl-learning.appspot.com",
-    messagingSenderId: "685952343693",
-    appId: "1:685952343693:web:915fc09af974a4fb468cc4"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

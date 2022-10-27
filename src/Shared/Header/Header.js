@@ -12,6 +12,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { Button, Image } from 'react-bootstrap';
 
 
+
 const Header = () => {
     const [theme, setTheme] = useState('dark');
 
@@ -37,14 +38,14 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to='/course'>Courses</Nav.Link>
                             <Nav.Link >FAQ</Nav.Link>
-                            <Nav.Link >Blog</Nav.Link>
+                            <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
                         </Nav>
                         <Nav>
                             <div className='switch'>
                                 <label>{theme === "light" ? "Light Mode" : "Dark Mode"}</label>
                                 <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}></ReactSwitch>
                             </div>
-                            <Nav.Link href="#deets">
+                            <Nav.Link>
                                 {
                                     user?.uid ?
                                         <>
@@ -59,10 +60,10 @@ const Header = () => {
                                 }
 
                             </Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
+                            <Nav.Link eventKey={2} >
                                 {user?.photoURL ?
                                     <Image style={{ height: '30px' }}
-                                        roundedCircle src={user?.photoURL}></Image>
+                                        roundedCircle src={user?.photoURL}> </Image>
                                     :
                                     <FaUserAlt></FaUserAlt>
                                 }

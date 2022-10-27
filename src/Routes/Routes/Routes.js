@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import Blog from "../../Pages/Blog/Blog";
 import Category from "../../Pages/Category/Category/Category";
 import Course from "../../Pages/Course/Course/Course";
 import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
@@ -46,6 +47,14 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>,
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>,
+            },
+            {
+                path: '*',
+                element: <h3>Opps! Looks like the link is out of existence. Please return to the previous page.</h3>,
             },
         ]
     }

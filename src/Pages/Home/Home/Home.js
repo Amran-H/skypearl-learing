@@ -14,9 +14,7 @@ const Home = () => {
         <div>
             <h2 className='mb-5'>Welcome to the finest digital learning platform SkyPearl-learning. Here you can find different courses of programming languages.</h2>
             <Container>
-                <Col lg="12" className='d-none d-lg-block justify-content-center '>
-                    <RightSideNav></RightSideNav>
-                </Col>
+
                 <Row xs={1} md={2} lg={3} className="g-2">
 
                     {

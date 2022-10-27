@@ -23,9 +23,8 @@ const RightSideNav = () => {
 
     return (
         <div className="d-grid my-3 px-5 " >
-            <h4>Please Login</h4>
+            <h4>Or use the following to login</h4>
             <ButtonGroup vertical>
-                <Button variant="outline-primary" className='mb-2'> Email and password Login</Button>
 
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-dark"><FaGoogle></FaGoogle>  Login with Google</Button>
 
